@@ -1,12 +1,20 @@
 #include <iostream>
 #include <cmath>
 #include <string>
-
+#include <cstdlib>
 int main ()
 {
     while (true) 
     {
+      std::system("clear");
         std::cout << " " << "\n";
+        std::cout << R"(
+ ____           __  __   ___  ____  
+|  _ \ ___  __ _\ \/ /  / _ \/ ___| 
+| |_) / _ \/ _` |\  /  | | | \___ \ 
+|  __/  __/ (_| |/  \  | |_| |___) |
+|_|   \___|\__,_/_/\_\  \___/|____/ 
+        )" << "\n";
         std::cout << " " << "\n";
         std::cout << " " << "\n";
         std::cout << "====================================================================" << "\n";
@@ -16,8 +24,8 @@ int main ()
         std::cout << "2.Number Calculator" << "\n";
         std::cout << "3.ASCII Calculator" << "\n";
         std::cout << "4.Charcter Encrypter" << "\n";
-        std::cout << "5.Odd/Even number Checker" << "\n";
-        std::cout << "6.Phone Suggester" << "\n";
+        std::cout << "5.Phone Suggester" << "\n";
+        std::cout << "6.Guess the Distro Game" << "\n";
         std::cout << "7.Exit" << "\n";
         std::cout << " " << "\n";
         std::cout << "==============================================" << "\n";
@@ -25,23 +33,25 @@ int main ()
         std::cout << "Choose a Program: ";
         std::cin >> choice;
 
-        if (std::cin.fail()) {
+        if (std::cin.fail()) 
+        {
             std::cin.clear();
             std::cin.ignore(1000, '\n');
             continue; 
         }
-
+       
         std::cout << " " << "\n";
         std::cout << "==============================================" << "\n";
         std::cout << " " << "\n";
-
+        
         switch (choice)
         {
         case 1:
         {
+            std::system("clear");
             std::cout << " " << "\n";
             std::cout << R"(
-            _                 ____      _            _       _             
+    _                 ____      _            _       _             
    / \   __ _  ___   / ___|__ _| | ___ _   _| | __ _| |_ ___  _ __ 
   / _ \ / _` |/ _ \ | |   / _` | |/ __| | | | |/ _` | __/ _ \| '__|
  / ___ \ (_| |  __/ | |__| (_| | | (__| |_| | | (_| | || (_) | |   
@@ -50,7 +60,7 @@ int main ()
         
             )" << "\n";
             std::cout << " " << "\n";
-            long age;
+            long long age;
             std::cout << "Enter Your age in years: ";
             std::cin >> age;
             std::cout << " " << "\n";
@@ -91,9 +101,10 @@ int main ()
         
         case 2:
         {
+            std::system("clear");
             std::cout << " " << "\n";
             std::cout << R"(
-         _   _                 _                       
+ _   _                 _                       
 | \ | |_   _ _ __ ___ | |__   ___ _ __         
 |  \| | | | | '_ ` _ \| '_ \ / _ \ '__|        
 | |\  | |_| | | | | | | |_) |  __/ |           
@@ -158,9 +169,10 @@ int main ()
 
         case 3:
         {
+            std::system("clear");
             std::cout << " " << "\n";
             std::cout << R"(
-    _    ____        ___ ___     ___             
+    _    ____        ___ ___     ___                   _       _
    / \  / ___| / ___|_ _|_ _|  / ___|__ _| | ___ _   _| | __ _| |_ ___  _ __ 
   / _ \ \___ \| |    | | | |  | |   / _` | |/ __| | | | |/ _` | __/ _ \| '__|
  / ___ \ ___) | |___ | | | |  | |__| (_| | | (__| |_| | | (_| | || (_) | |   
@@ -197,8 +209,10 @@ int main ()
 
         case 4:
         {
+            std::system("clear");
             std::cout << " " << "\n";
-            std::cout << R"(  ____ _                          _             
+            std::cout << R"(
+  ____ _                          _             
  / ___| |__   __ _ _ __ __ _  ___| |_ ___ _ __  
 | |   | '_ \ / _` | '__/ _` |/ __| __/ _ \ '__| 
 | |___| | | | (_| | | | (_| | (__| ||  __/ |    
@@ -220,33 +234,11 @@ int main ()
             std::cout << " " << "\n";
             break;
         }
-
         case 5:
         {
-            std::cout << "Odd/Even number Checker" << "\n";
-            std::cout << " " << "\n";
-            int numb;
-            std::cout << "Enter Your number: ";
-            std::cin >> numb;
-            std::cout << " " << "\n";
-            std::cout << "===============================" << "\n";
-            std::cout << " " << "\n";
-            if (numb % 2 == 0)
-            {
-                std::cout << numb << " is an even number" << "\n";
-            }
-            else
-            {
-                std::cout << numb << " is an odd number" << "\n";
-            }
-            std::cout << " " << "\n";
-            std::cout << "===============================" << "\n";
-            std::cout << " " << "\n";
-            break;
-        }
-        case 6:
-        {
-            std::cout << R"( ____  _                                        
+            std::system("clear");
+            std::cout << R"(
+ ____  _                                        
 |  _ \| |__   ___  _ __   ___                   
 | |_) | '_ \ / _ \| '_ \ / _ \                  
 |  __/| | | | (_) | | | |  __/                  
@@ -346,9 +338,106 @@ int main ()
             std::cout << " " << "\n";
             break;
         }
+        case 6:
+        { 
+        std::system("clear");
+        std::cout << R"(
+  ____                       _   _           
+ / ___|_   _  ___  ___ ___  | |_| |__   ___  
+| |  _| | | |/ _ \/ __/ __| | __| '_ \ / _ \ 
+| |_| | |_| |  __/\__ \__ \ | |_| | | |  __/ 
+ \____|\__,_|\___||___/___/  \__|_| |_|\___| 
+|  _ \(_)___| |_ _ __ ___                    
+| | | | / __| __| '__/ _ \                   
+| |_| | \__ \ |_| | | (_) |                  
+|____/|_|___/\__|_|  \___/                   
+        )" << "\n";
+        std::string dstrsf1[3] = {"Debian","Ubuntu","Mint"};
+        std::cout << R"(
+        List 1
+        )" << "\n";
+        std::system("clear");
+        std::cout << "Guess The last distro in this list :" << "[" << dstrsf1[0] << ", " << dstrsf1[1] << ", ?"<< "]" << "\n";
+        std::cout << "Hint : This distro is based on Ubuntu and it runs cinnamon DE" << "\n";
+        std::string guess1;
+        std::cout << "Guess it : ";
+        std::cin >> guess1;
+        if (guess1 == dstrsf1[2] || guess1 == "mint")
+        {
+          std::system("clear");
+          std::cout << "You win !" << "\n";
+        }
+        else
+        {
+          std::system("clear");
+          std::cout << "You Lose" << "\n";
+          continue;
+        }
+        std::string dstrsf2[3] = {"Arch","CachyOS","Artix"};
+        std::cout << R"(
+        List 2
+        )" << "\n";
+        std::cout << "Guess The last distro in this list :" << "[" << dstrsf2[0] << ", " << dstrsf2[1] << ", ?"<< "]" << "\n";
+        std::cout << "Hint : This distro is arch-like but it dosen't have systemd" << "\n";
+        std::string guess2;
+        std::cout << "Guess it : ";
+        std::cin >> guess2;
+        if (guess2 == dstrsf2[2] || guess2 == "artix")
+        {
+          std::system("clear");
+          std::cout << "You win !" << "\n";
+        }
+        else
+        {
+          std::system("clear");
+          std::cout << "You Lose" << "\n";
+          continue;
+        }
+        std::string dstrsf3[3] = {"OpenBSD","NetBSD","FreeBSD"};
+        std::cout << R"(
+        List 3
+        )" << "\n";
+        std::cout << "Guess The last distro in this list :" << "[" << dstrsf3[0] << ", " << dstrsf3[1] << ", ?"<< "]" << "\n";
+        std::cout << "Hint : This distro is the most popular BSD distro" << "\n";
+        std::string guess3;
+        std::cout << "Guess it : ";
+        std::cin >> guess3;
+        if (guess3 == dstrsf3[2] || guess3 == "freebsd" || guess3 == "Freebsd" || guess3 == "FreeBsd")
+        {
+          std::system("clear");
+          std::cout << "You win !" << "\n";
+        }
+        else
+        {
+          std::system("clear");
+          std::cout << "You Lose" << "\n";
+          continue;
+        }
+        std::string dstrsf4[3] = {"Arch","Void","Gentoo"};
+        std::cout << R"(
+        List 4
+        )" << "\n";
+        std::cout << "Guess The last distro in this list :" << "[" << dstrsf4[0] << ", " << dstrsf4[1] << ", ?"<< "]" << "\n";
+        std::cout << "Hint : This distro is very very complicated and you should compile all the whole packages" << "\n";
+        std::string guess4;
+        std::cout << "Guess it : ";
+        std::cin >> guess4;
+        if (guess4 == dstrsf4[2] || guess4 == "gentoo")
+        {
+          std::cout << "You win !" << "\n";
+        }
+        else
+        {
+          std::cout << "You Lose" << "\n";
+          continue;
+        }
+        break;
+        }            
+        
         case 7:
         {
             std::cout << "Exiting PeaX OS... Goodbye!" << "\n";
+            std::cout << "by Mtitla\n";
             return 0; 
         }
         
@@ -365,11 +454,10 @@ int main ()
         
         if (ex == "y" || ex == "Y") 
         {
+            std::cout << "Exiting PeaX OS... Goodbye!" << "\n";
+            std::cout << "by Mtitla\n";
             break; 
         }
-
-        std::cout << "\nDeveloped on Arch Linux (Kernel 6.19)" << "\n";
-        std::cout << "PC: HP 250 G1 | CPU: Core i3-2348M" << "\n";
         std::cout << "==============================================\n" << "\n";
 
     } 
